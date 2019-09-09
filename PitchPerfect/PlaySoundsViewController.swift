@@ -22,6 +22,7 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     var recordedAudioURL: URL!
     
+    
     var audioFile:AVAudioFile!
     var audioEngine:AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
@@ -33,6 +34,8 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+
         configureUI(.notPlaying)
     }
     // MARK: Actions
@@ -64,6 +67,7 @@ class PlaySoundsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         setupAudio()
         // Do any additional setup after loading the view.
     }
